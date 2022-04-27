@@ -62,7 +62,7 @@ class Nobel_dijak:
     self.kereszt = kereszt
     self.vezetek = vezetek
 
-with open("nobel.csv","r",encoding="latin2") as f:
+with open("nobel.csv","r",encoding="utf-8") as f:
   f.readline()
   lista = [Nobel_dijak(sor) for sor in f]
 
@@ -82,4 +82,8 @@ print(f"3.4 feladat: {irodalmi1} {irodalmi2}")
 
 #5
 
+curie = [sor for sor in lista if "Curie" in sor.vezetek or "Curie" in sor.kereszt]
+
+print("3.5 feladat:")
+[print(f"         {sor.kereszt} {sor.vezetek}({sor.tipus})") for sor in curie]
 
