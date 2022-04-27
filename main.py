@@ -59,13 +59,19 @@ class Nobel_dijak:
     ev,tipus,kereszt,vezetek = sor.strip().split(";")
     self.ev = int(ev)
     self.tipus = tipus
-    self.keresztnev = kereszt
+    self.kereszt = kereszt
     self.vezetek = vezetek
 
 with open("nobel.csv","r",encoding="latin2") as f:
   f.readline()
   lista = [Nobel_dijak(sor) for sor in f]
 
-#3
+#3 Arthur B. McDonald
+
+milyen_tipusu = [sor.tipus for sor in lista if sor.kereszt == "Arthur B." and sor.vezetek == "McDonald"]
+
+print(f"3.3 feladat: {milyen_tipusu[0]}")
+
+
 
 
