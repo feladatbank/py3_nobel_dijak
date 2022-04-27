@@ -72,6 +72,14 @@ milyen_tipusu = [sor.tipus for sor in lista if sor.kereszt == "Arthur B." and so
 
 print(f"3.3 feladat: {milyen_tipusu[0]}")
 
+#4
 
+irodalmi1 = [sor.kereszt for sor in lista if sor.ev == 2017 and sor.tipus == "irodalmi"][0]
+
+irodalmi2 = [sor.vezetek for sor in lista if sor.ev == 2017 and sor.tipus == "irodalmi"][0]
+
+print(f"3.4 feladat: {irodalmi1} {irodalmi2}")
+
+#5
 
 
