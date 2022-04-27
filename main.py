@@ -47,4 +47,25 @@ __________________________________________________
 
 """
 
+#év;típus;keresztnév;vezetéknév
+#2017;fizikai;Rainer;Weiss
+#2017;fizikai;Barry C.;Barish
+#2017;fizikai;Kip S.;Thorne
+
+#1-2
+
+class Nobel_dijak:
+  def __init__(self,sor):
+    ev,tipus,kereszt,vezetek = sor.strip().split(";")
+    self.ev = int(ev)
+    self.tipus = tipus
+    self.keresztnev = kereszt
+    self.vezetek = vezetek
+
+with open("nobel.csv","r",encoding="latin2") as f:
+  f.readline()
+  lista = [Nobel_dijak(sor) for sor in f]
+
+#3
+
 
