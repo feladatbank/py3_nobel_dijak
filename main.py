@@ -68,18 +68,15 @@ with open("nobel.csv","r",encoding="utf-8") as f:
 
 #3 Arthur B. McDonald
 
-milyen_tipusu = [sor.tipus for sor in lista if sor.kereszt == "Arthur B." and sor.vezetek == "McDonald"]
+milyen_tipusu = [sor.tipus for sor in lista if sor.kereszt == "Arthur B." and sor.vezetek == "McDonald"][0]
 
-print(f"3.3 feladat: {milyen_tipusu[0]}")
+print(f"3.3 feladat: {milyen_tipusu}")
 
 #4
 
-irodalmi1 = [sor.kereszt for sor in lista if sor.ev == 2017 and sor.tipus == "irodalmi"][0]
+irodalmi2 = [sor for sor in lista if sor.ev == 2017 and sor.tipus == "irodalmi"]
 
-irodalmi2 = [sor.vezetek for sor in lista if sor.ev == 2017 and sor.tipus == "irodalmi"][0]
-
-print(f"3.4 feladat: {irodalmi1} {irodalmi2}")
-
+[print(f"3.4 feladat: {sor.kereszt} {sor.vezetek}") for sor in irodalmi2]
 #5
 
 curie = [sor for sor in lista if "Curie" in sor.vezetek or "Curie" in sor.kereszt]
